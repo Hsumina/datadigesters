@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datadigesters</title>
+    <style>
+        /*타이틀*/
+        label {
+            display: block;
+            font:
+                1rem 'Fira Sans',
+                sans-serif;
+            }
+            /*입력창*/
+            input,label {
+            margin: 0.4rem 0;
+            }
+            /*text출력 창*/
+            label,textarea {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            }
+
+            textarea {
+            padding: 10px;
+            max-width: 100%;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999;
+            }
+
+            #result{
+            display: block;
+            margin-bottom: 10px;
+            }
+   
+    </style>
+</head>
+<body>
+     <!--타이틀-->
+     <h1>Datadigester</h1>
+     <!--input box-->
+     <label for="site-search">무엇이 궁금하신가요?</label>
+     <input type="search" id="site-search" name="q" />
+     <button onclick="showSearchQuery()">검색</button>  
+     <!--output-->
+     <label for="story">학술 논문 사이트 자료 조사 결과입니다.</label>
+     <textarea id="story" name="story" rows="5" cols="33"></textarea>
+ 
+     <script>
+         function showSearchQuery() {
+             var searchInput = document.getElementById("site-search").value;
+             document.getElementById("story").innerText = searchInput + " 입니다.";
+         }
+     </script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HH6G8BKB7E"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HH6G8BKB7E');
+    </script>
+
+</body>
+</html>
